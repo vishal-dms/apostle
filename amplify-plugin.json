@@ -1,0 +1,22 @@
+{
+  "name": "apostle",
+  "type": "util",
+  "commands": [
+    "continue-rollback",
+    "version",
+    "help"
+  ],
+  "eventHandlers": [
+    "PreInit",
+    "PostInit",
+    "PreExport",
+    "PrePush",
+    "PostPush",
+    "PrePull",
+    "PostPull",
+    "PostEnvAdd",
+    "PreCodegenModels",
+    "PostCodegenModels",
+    "InternalOnlyPostEnvRemove"
+  ]
+}
