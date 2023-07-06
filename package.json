@@ -8,9 +8,12 @@
   },
   "author": "Vishal Nayak <vishnaya@amazon.com>",
   "contributors": [
-    {
+    "majorContributors" : {
       "email": "msubhayu@amazon.com",
       "name": "Subhayu Mukherjee"
+    },
+    "minorContributors" : {
+       "name": ["Mukul Vashishtha", "Susmitha Patchigolla"]
     }
   ],
   "license": "ISC",
