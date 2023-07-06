@@ -1,5 +1,5 @@
 {
-  "name": "apostle",
+  "name": "amplify-apostle",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,6 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Vishal Nayak <vishnaya@amazon.com>",
+  "contributors": [
+    {
+      "email": "msubhayu@amazon.com",
+      "name": "Subhayu Mukherjee"
+    }
+  ],
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.1410.0"
