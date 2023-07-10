@@ -28,16 +28,21 @@ module.exports.checkfailedvents = async (stackName, region) => {
       StackName: stackName,
       NextToken: nextToken,
     };
+    console.log("Scanning Stack: ".cyan,params.StackName);
     const response = await cloudFormation.describeStackEvents(params).promise();
     nextToken = response.NextToken;
     for (const event of response.StackEvents) {
       if (isUpdateRollbackInProgressEvent(event, stackName)) {
         updateRollbackInProgressEncountered = true;
+
+        console.log("\tFailed Resource: ",updateRollbackFailedEvent.LogicalResourceId.red);
         resourcesToSkip.push(updateRollbackFailedEvent);
         if (
           updateRollbackFailedEvent["ResourceType"] ===
           "AWS::CloudFormation::Stack"
         ) {
+          console.log("\tResource Type:", "Stack".red)
+          console.log("\nNow scanning nested stack...".grey)
           stackName =
             updateRollbackFailedEvent["PhysicalResourceId"].split("/")[1];
           updateRollbackInProgressEncountered = false;

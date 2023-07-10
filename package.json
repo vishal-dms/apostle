@@ -1,6 +1,6 @@
 {
   "name": "amplify-apostle",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,7 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.1410.0"
+    "aws-sdk": "^2.1410.0",
+    "colors": "^1.4.0"
   }
 }
