@@ -1,7 +1,7 @@
 var colors = require('colors');
 colors.enable()
 
-const event = require("./amplify/team-provider-info.json");
+const event = require("/Users/vishnaya/Documents/hackathon-23/HackDemoOne/amplify/team-provider-info.json");
 const describe = require("../helpers/describe-stack-events.js");
 const AWS = require("aws-sdk");
 const environmentName = process.argv[4];
@@ -31,6 +31,7 @@ async function isStackRolledBack(stackName) {
   try {
     const data = await cloudformation.waitFor('stackRollbackComplete', params).promise();
     console.log("\nROLLBACK COMPLETE".green);
+    return true
   } catch (err) {
     // console.error("Failed to describe stack:", err);
     return false;
